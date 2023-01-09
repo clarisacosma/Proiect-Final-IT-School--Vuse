@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+}
+.nav1 {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 100px;
+}
+.nav1 .navRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.nav1 .navRight .account,
+.nav1 .navRight .shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 15px;
+}
+.nav1 .navRight .searchBar {
+  background-color: #000;
+  width: 220px;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: groove;
+  border-color: #c6c0c0;
+}
+svg,
+span {
+  color: #c6c0c0;
+}
+.nav2 {
+  background-color: #000;
+  color: #fff;
+  border-top-style: solid;
+  border-width: thin;
+  border-color: #c6c0c0;
+  width: 100%;
+  padding: 20px 100px;
+}
+.nav2 ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nav2 ul li {
+  align-self: inherit;
+  color: #c6c0c0;
+}
+.nav2 ul li:hover {
+  color: #f8ab28;
+  cursor: pointer;
+}
+.shipping {
+  background-color: #4cd8c8;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.shipping .truck {
+  padding-right: 7px;
+  width: 30px;
+}
+.vuseMain {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  width: 100%;
+}
+.vuseMain .mainPic {
+  flex-grow: 2;
+}
+.vuseMain .vuseDescription {
+  background-color: #000;
+  color: #fff;
+  padding-top: 70px;
+  padding-left: 40px;
+  max-width: 100%;
+  flex-grow: 1;
+}
+.vuseMain .vuseDescription h1 {
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+.vuseMain .vuseDescription p {
+  color: #c6c0c0;
+  padding-bottom: 9px;
+}
+.vuseMain .vuseDescription .explanation {
+  font-size: x-small;
+}
+.vuseMain .vuseDescription .firstBttn {
+  background-color: #f8ab28;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.vuseMain .vuseDescription .firstBttn:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+.vuseSecond {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 50px;
+}
+.firstContainer,
+.secondContainer,
+.thirdContainer {
+  position: relative;
+  flex-grow: 1;
+}
+.firstContainer .text1,
+.secondContainer .text1,
+.thirdContainer .text1,
+.firstContainer .text2,
+.secondContainer .text2,
+.thirdContainer .text2,
+.firstContainer .text3,
+.secondContainer .text3,
+.thirdContainer .text3 {
+  position: absolute;
+  padding: 25px 15px 15px 25px;
+  text-align: left;
+}
+.firstContainer h2,
+.secondContainer h2,
+.thirdContainer h2 {
+  color: #fff;
+}
+.firstContainer p,
+.secondContainer p,
+.thirdContainer p {
+  color: #c6c0c0;
+  padding-top: 10px;
+}
+.firstContainer button,
+.secondContainer button,
+.thirdContainer button {
+  color: #f8ab28;
+  background-color: #000;
+  border-color: #f8ab28;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.firstContainer .secondPic,
+.secondContainer .secondPic,
+.thirdContainer .secondPic,
+.firstContainer .thirdPic,
+.secondContainer .thirdPic,
+.thirdContainer .thirdPic,
+.firstContainer .fourthPic,
+.secondContainer .fourthPic,
+.thirdContainer .fourthPic {
+  max-height: 240px;
+  max-width: 550px;
+}
+.whyVuse {
+  display: flex;
+  flex-direction: row;
+  background-color: #4cd8c8;
+}
+.whyVuse .delivery,
+.whyVuse .tested {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

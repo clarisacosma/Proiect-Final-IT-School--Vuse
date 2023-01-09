@@ -1,0 +1,198 @@
+@import "_variables.less";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.nav1 {
+  background-color: @color-black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 100px;
+
+  .navRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .account,
+    .shop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 15px;
+      font-size: 15px;
+    }
+
+    .searchBar {
+      background-color: @color-black;
+      width: 220px;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+      border-bottom-style: groove;
+      border-color: @color-grey;
+    }
+  }
+}
+
+svg,
+span {
+  color: @color-grey;
+}
+
+.nav2 {
+  background-color: @color-black;
+  color: @color-white;
+  border-top-style: solid;
+  border-width: thin;
+  border-color: @color-grey;
+  width: 100%;
+  padding: 20px 100px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    li {
+      align-self: inherit;
+      color: @color-grey;
+    }
+
+    li:hover {
+      color: @color-orange;
+      cursor: pointer;
+    }
+  }
+}
+
+.shipping {
+  background-color: @color-shipping;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .truck {
+    padding-right: 7px;
+    width: 30px;
+  }
+}
+
+.vuseMain {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  width: 100%;
+
+  .mainPic {
+    flex-grow: 2;
+  }
+  .vuseDescription {
+    background-color: @color-black;
+    color: @color-white;
+    padding-top: 70px;
+    padding-left: 40px;
+    max-width: 100%;
+    flex-grow: 1;
+
+    h1 {
+      font-weight: bolder;
+      padding-bottom: 10px;
+    }
+
+    p {
+      color: @color-grey;
+      padding-bottom: 9px;
+    }
+
+    .explanation {
+      font-size: x-small;
+    }
+
+    .firstBttn {
+      background-color: @color-orange;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .firstBttn:hover {
+      background-color: @color-white;
+      cursor: pointer;
+    }
+  }
+}
+
+.vuseSecond {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 50px;
+}
+
+.firstContainer,
+.secondContainer,
+.thirdContainer {
+  position: relative;
+  flex-grow: 1;
+
+  .text1,
+  .text2,
+  .text3 {
+    position: absolute;
+    padding: 25px 15px 15px 25px;
+    text-align: left;
+  }
+
+  h2 {
+    color: @color-white;
+  }
+
+  p {
+    color: @color-grey;
+    padding-top: 10px;
+  }
+
+  button {
+    color: @color-orange;
+    background-color: @color-black;
+    border-color: @color-orange;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .secondPic,
+  .thirdPic,
+  .fourthPic {
+    max-height: 240px;
+    max-width: 550px;
+  }
+}
+
+.whyVuse {
+  display: flex;
+  flex-direction: row;
+  background-color: @color-shipping;
+
+  .delivery,
+  .tested {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
