@@ -140,59 +140,201 @@ span {
 .vuseSecond {
   display: flex;
   flex-direction: row;
-  padding: 30px 50px;
-}
+  justify-content: space-between;
+  // padding: 30px 50px;
+  padding: 30px 0;
+  width: 90%;
+  margin: auto;
 
-.firstContainer,
-.secondContainer,
-.thirdContainer {
-  position: relative;
-  flex-grow: 1;
+  .firstContainer,
+  .secondContainer,
+  .thirdContainer {
+    position: relative;
+    // flex-grow: 1;
+    width: 33%;
+    margin-right: 10px;
 
-  .text1,
-  .text2,
-  .text3 {
-    position: absolute;
-    padding: 25px 15px 15px 25px;
-    text-align: left;
+    .text1,
+    .text2,
+    .text3 {
+      position: absolute;
+      padding: 25px 15px 15px 25px;
+      text-align: left;
+    }
+
+    h2 {
+      color: @color-white;
+    }
+
+    p {
+      color: @color-grey;
+      padding-top: 10px;
+    }
+
+    button {
+      color: @color-orange;
+      background-color: @color-black;
+      border-color: @color-orange;
+      margin-top: 20px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .secondPic,
+    .thirdPic,
+    .fourthPic {
+      width: 100%;
+    }
   }
 
-  h2 {
-    color: @color-white;
-  }
-
-  p {
-    color: @color-grey;
-    padding-top: 10px;
-  }
-
-  button {
-    color: @color-orange;
-    background-color: @color-black;
-    border-color: @color-orange;
-    margin-top: 20px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-
-  .secondPic,
-  .thirdPic,
-  .fourthPic {
-    max-height: 240px;
-    max-width: 550px;
+  .thirdContainer {
+    margin-right: 0;
   }
 }
 
 .whyVuse {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: @color-shipping;
 
   .delivery,
   .tested {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 30px 40px 20px 30px;
+    text-align: center;
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0;
+  margin-top: 40px;
+  background-color: @color-grey;
+
+  .intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+    padding-bottom: 20px;
+
+    button {
+      border: none;
+      background-color: @color-grey;
+      color: @color-black;
+    }
+  }
+
+  .categories {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    .category1:last-of-type {
+      margin-right: 0;
+    }
+
+    .category1 {
+      width: 33%;
+      background-color: @color-white;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+      }
+      p {
+        padding: 15px 0px;
+      }
+
+      button {
+        background-color: @color-white;
+        border: none;
+      }
+
+      .categoryText {
+        padding-left: 15px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.social {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .socialMedia {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .socialMedia2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .socialPics {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: aqua;
+  }
+}
+
+.about {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+
+  .warnings {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.news {
+  width: 100%;
+  background-color: @color-grey;
+  display: flex;
+
+  .newsletter {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    button {
+      background-color: @color-white;
+      color: @color-black;
+      border-radius: 20px;
+      padding: 8px 45px;
+      border-color: @color-orange;
+    }
   }
 }
