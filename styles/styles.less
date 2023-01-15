@@ -11,9 +11,10 @@
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .stickyNav {
@@ -105,18 +106,17 @@ span {
 .vuseMain {
   display: flex;
   flex-direction: row;
-  max-width: 100%;
   width: 100%;
 
   .mainPic {
-    flex-grow: 2;
+    width: 60%;
   }
   .vuseDescription {
     background-color: @color-black;
     color: @color-white;
     padding-top: 70px;
     padding-left: 40px;
-    max-width: 100%;
+    max-width: 40%;
     flex-grow: 1;
 
     h1 {
@@ -145,6 +145,10 @@ span {
     .firstBttn:hover {
       background-color: @color-white;
       cursor: pointer;
+    }
+
+    .secondBttn {
+      content-visibility: hidden;
     }
   }
 }
@@ -319,6 +323,11 @@ span {
     align-items: center;
   }
 
+  .socialPicsMobile {
+    display: none;
+    content-visibility: hidden;
+  }
+
   .socialPics {
     display: flex;
     width: 90%;
@@ -449,5 +458,147 @@ span {
         padding-bottom: 10px;
       }
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .vuseMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .mainPic {
+      width: 100%;
+    }
+
+    .vuseDescription {
+      max-width: 100%;
+      flex-grow: unset;
+
+      .firstBttn {
+        display: none;
+      }
+
+      .secondBttn {
+        content-visibility: visible;
+        margin-bottom: 20px;
+        background-color: @color-orange;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .secondBttn:hover {
+        background-color: @color-white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .vuseSecond {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .firstContainer,
+    .secondContainer,
+    .thirdContainer {
+      width: 100%;
+
+      .text1,
+      .text2,
+      .text3 {
+        padding: 25px 15px;
+      }
+
+      p {
+        padding-top: 10px;
+        font-size: 20px;
+      }
+
+      button {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .whyVuse {
+    display: flex;
+    flex-direction: column;
+
+    .delivery,
+    .tested {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .articles {
+    margin-top: 0px;
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .introRight {
+        padding-top: 7px;
+
+        button {
+          font-size: 17px;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        svg {
+          width: 35px;
+        }
+      }
+    }
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .category1 {
+        width: 90%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .social {
+    .socialMedia {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .socialPics {
+      content-visibility: hidden;
+      display: none;
+    }
+
+    .socialPicsMobile {
+      display: flex;
+      justify-content: center;
+      content-visibility: visible;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
   }
 }
