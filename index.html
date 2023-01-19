@@ -5,33 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet" />
+    <script src="functions.js" defer></script>
     <title>Vuse</title>
   </head>
   <body>
     <div class="stickyNav">
       <div class="nav1">
         <img src="src/Logo.PNG" alt="logo" />
+
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <span class="hamburgerText">Meniu</span>
+        </div>
+
         <div class="navRight">
-          <input
-            type="search"
-            placeholder="Cauta device-uri"
-            class="searchBar"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-            width="20px"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          <div class="searchDesktop">
+            <input
+              type="search"
+              placeholder="Cauta device-uri"
+              class="searchBar"
             />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+              width="20px"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+          </div>
+
+          <div class="searchMobile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+              width="20px"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+            <span class="searchBarMobile">Cauta</span>
+          </div>
 
           <div class="account">
             <svg

@@ -1,93 +1,20 @@
-@font-face {
-  font-family: 'League Gothic';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: normal;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/leaguegothic/v6/qFdR35CBi4tvBz81xy7WG7ep-BQAY7Krj7feObpH_-am.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Changa One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/changaone/v18/xfu00W3wXn3QLUJXhzq46AY.ttf) format('truetype');
-}
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Mont", sans-serif;
 }
 body {
   max-width: 100%;
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
+  font-family: "Mont", sans-serif;
+}
+.hamburger {
+  display: none;
 }
 .stickyNav {
   position: sticky;
@@ -122,6 +49,10 @@ body {
   border-right-style: hidden;
   border-bottom-style: groove;
   border-color: #efefef;
+  padding-bottom: 10px;
+}
+.nav1 .navRight .searchMobile {
+  display: none;
 }
 svg,
 span {
@@ -202,6 +133,7 @@ span {
   cursor: pointer;
 }
 .vuseMain .vuseDescription .secondBttn {
+  display: none;
   content-visibility: hidden;
 }
 .vuseSecond {
@@ -242,7 +174,7 @@ span {
 .vuseSecond .secondContainer p,
 .vuseSecond .thirdContainer p {
   color: #efefef;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .vuseSecond .firstContainer button,
 .vuseSecond .secondContainer button,
@@ -313,6 +245,7 @@ span {
   border: none;
   background-color: #efefef;
   color: #1d1d1b;
+  font-weight: bold;
 }
 .articles .categories {
   display: flex;
@@ -343,6 +276,8 @@ span {
 .articles .categories .category1 button {
   background-color: #fff;
   border: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .articles .categories .category1 .categoryText {
   padding-left: 15px;
@@ -366,6 +301,9 @@ span {
 .social .socialMedia2 {
   display: flex;
   align-items: center;
+}
+.social .socialMedia2 img {
+  padding-left: 4px;
 }
 .social .socialPicsMobile {
   display: none;
@@ -392,6 +330,10 @@ span {
   padding-top: 40px;
   padding-bottom: 30px;
   justify-content: space-between;
+  font-size: 13px;
+}
+.about h4 {
+  font-size: 16px;
 }
 .about .warnings {
   display: flex;
@@ -399,6 +341,7 @@ span {
 }
 .about .warnings p {
   padding-bottom: 10px;
+  font-size: 13px;
 }
 .news {
   width: 100%;
@@ -413,6 +356,7 @@ span {
   align-items: baseline;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 18px;
 }
 .news .newsletter button {
   background-color: #fff;
@@ -420,6 +364,8 @@ span {
   border-radius: 20px;
   padding: 8px 45px;
   border-color: #f8ab28;
+  font-size: 16px;
+  font-weight: bold;
 }
 .emptyDiv {
   background-color: #1d1d1b;
@@ -484,15 +430,34 @@ span {
   padding-bottom: 10px;
 }
 @media (min-width: 1200px) {
+  .vuseMain .vuseDescription {
+    padding: 20px;
+  }
   .vuseSecond .firstContainer p,
   .vuseSecond .secondContainer p,
   .vuseSecond .thirdContainer p {
     padding-bottom: 0px;
+    font-size: 14px;
+    line-height: 1;
   }
   .vuseSecond .firstContainer .text1,
   .vuseSecond .secondContainer .text2,
   .vuseSecond .thirdContainer .text3 {
     padding: 5px 20px 2px 25px;
+    font-size: 15px;
+  }
+  .articles .categories .category1 p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1366px) {
+  .vuseMain .vuseDescription {
+    padding-top: 25px;
+  }
+  .vuseSecond .firstContainer p,
+  .vuseSecond .secondContainer p,
+  .vuseSecond .thirdContainer p {
+    line-height: 1.5;
   }
 }
 @media (min-width: 1440px) {
@@ -519,7 +484,7 @@ span {
   .vuseSecond .firstContainer p,
   .vuseSecond .secondContainer p,
   .vuseSecond .thirdContainer p {
-    font-size: 27px;
+    font-size: 23px;
   }
   .vuseSecond .firstContainer h2,
   .vuseSecond .secondContainer h2,
@@ -529,7 +494,7 @@ span {
   .vuseSecond .firstContainer button,
   .vuseSecond .secondContainer button,
   .vuseSecond .thirdContainer button {
-    font-size: 25px;
+    font-size: 23px;
   }
   .whyVuse,
   .whyVuse .delivery,
@@ -539,11 +504,9 @@ span {
   .articles .categories .category1 h3 {
     font-size: 25px;
   }
-  .articles .categories .category1 p {
-    font-size: 22px;
-  }
+  .articles .categories .category1 p,
   .articles .categories .category1 button {
-    font-size: 22px;
+    font-size: 20px;
   }
   .articles .intro button {
     font-size: 20px;
@@ -557,12 +520,15 @@ span {
   .social .socialMedia {
     font-size: 27px;
   }
-  .about {
-    font-size: 24px;
+  .social .socialMedia .socialMedia2 img {
+    width: 40px;
   }
-  .news .newsletter {
-    font-size: 24px;
+  .about .warnings p,
+  .about p,
+  .about h4 {
+    font-size: 21px;
   }
+  .news .newsletter,
   .news .newsletter button {
     font-size: 24px;
   }
@@ -576,15 +542,90 @@ span {
   .nav1,
   .nav2,
   .shipping,
-  .searchBar {
-    font-size: 24px;
-  }
+  .searchBar,
   .nav1 .navRight .account,
   .nav1 .navRight .shop {
     font-size: 24px;
   }
 }
+@media (min-width: 2550px) {
+  .navRight,
+  .nav2 {
+    font-size: 26px;
+  }
+  .navRight .account svg,
+  .navRight .shop svg {
+    width: 30px;
+  }
+  .nav1 img {
+    width: 170px;
+    height: 60px;
+  }
+  .navRight .searchDesktop svg {
+    width: 30px;
+  }
+  .shipping {
+    font-size: 30px;
+    padding-top: 4px;
+  }
+  .vuseMain .vuseDescription {
+    padding: 55px;
+  }
+  .vuseMain .vuseDescription p {
+    font-size: 27px;
+  }
+  .vuseSecond .firstContainer p,
+  .vuseSecond .secondContainer p,
+  .vuseSecond .thirdContainer p {
+    line-height: 2;
+    font-size: 25px;
+  }
+}
 @media (max-width: 640px) {
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+  .hamburger .hamburgerText {
+    width: 30px;
+    height: 3px;
+    color: #fff;
+    margin: 6px 0;
+  }
+  .nav1 {
+    padding: 10px;
+  }
+  .nav1 .navRight .searchDesktop {
+    content-visibility: hidden;
+  }
+  .nav1 .navRight .searchMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav1 .navRight .account {
+    content-visibility: hidden;
+  }
+  .nav2 {
+    display: none;
+  }
+  .shipping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 10px;
+  }
   .vuseMain {
     display: flex;
     flex-direction: column;

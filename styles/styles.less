@@ -1,6 +1,4 @@
 @import "_variables.less";
-@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Changa+One&display=swap");
 
 *,
 *::after,
@@ -8,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Mont", sans-serif;
 }
 
 body {
@@ -15,6 +14,11 @@ body {
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
+  font-family: "Mont", sans-serif;
+}
+
+.hamburger {
+  display: none;
 }
 
 .stickyNav {
@@ -47,12 +51,16 @@ body {
 
     .searchBar {
       background-color: @color-black;
-      // width: 220px;
       border-top-style: hidden;
       border-left-style: hidden;
       border-right-style: hidden;
       border-bottom-style: groove;
       border-color: @color-grey;
+      padding-bottom: 10px;
+    }
+
+    .searchMobile {
+      display: none;
     }
   }
 }
@@ -148,6 +156,7 @@ span {
     }
 
     .secondBttn {
+      display: none;
       content-visibility: hidden;
     }
   }
@@ -183,7 +192,7 @@ span {
 
     p {
       color: @color-grey;
-      padding-top: 10px;
+      padding-top: 5px;
     }
 
     button {
@@ -256,6 +265,7 @@ span {
       border: none;
       background-color: @color-grey;
       color: @color-black;
+      font-weight: bold;
     }
   }
 
@@ -292,6 +302,8 @@ span {
       button {
         background-color: @color-white;
         border: none;
+        font-weight: bold;
+        text-transform: uppercase;
       }
 
       .categoryText {
@@ -321,6 +333,10 @@ span {
   .socialMedia2 {
     display: flex;
     align-items: center;
+
+    img {
+      padding-left: 4px;
+    }
   }
 
   .socialPicsMobile {
@@ -353,6 +369,11 @@ span {
   padding-top: 40px;
   padding-bottom: 30px;
   justify-content: space-between;
+  font-size: 13px;
+
+  h4 {
+    font-size: 16px;
+  }
 
   .warnings {
     display: flex;
@@ -360,6 +381,7 @@ span {
 
     p {
       padding-bottom: 10px;
+      font-size: 13px;
     }
   }
 }
@@ -377,6 +399,7 @@ span {
     align-items: baseline;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-size: 18px;
 
     button {
       background-color: @color-white;
@@ -384,6 +407,8 @@ span {
       border-radius: 20px;
       padding: 8px 45px;
       border-color: @color-orange;
+      font-size: 16px;
+      font-weight: bold;
     }
   }
 }
@@ -462,19 +487,41 @@ span {
 }
 
 @media (min-width: 1200px) {
+  .vuseMain .vuseDescription {
+    padding: 20px;
+  }
+
   .vuseSecond .firstContainer p,
   .vuseSecond .secondContainer p,
   .vuseSecond .thirdContainer p {
     padding-bottom: 0px;
+    font-size: 14px;
+    line-height: 1;
   }
 
   .vuseSecond .firstContainer .text1,
   .vuseSecond .secondContainer .text2,
   .vuseSecond .thirdContainer .text3 {
     padding: 5px 20px 2px 25px;
+    font-size: 15px;
+  }
+
+  .articles .categories .category1 p {
+    font-size: 12px;
   }
 }
 
+@media (min-width: 1366px) {
+  .vuseMain .vuseDescription {
+    padding-top: 25px;
+  }
+
+  .vuseSecond .firstContainer p,
+  .vuseSecond .secondContainer p,
+  .vuseSecond .thirdContainer p {
+    line-height: 1.5;
+  }
+}
 @media (min-width: 1440px) {
   .vuseSecond .firstContainer .text1,
   .vuseSecond .secondContainer .text2,
@@ -504,7 +551,7 @@ span {
   .vuseSecond .firstContainer p,
   .vuseSecond .secondContainer p,
   .vuseSecond .thirdContainer p {
-    font-size: 27px;
+    font-size: 23px;
   }
 
   .vuseSecond .firstContainer h2,
@@ -516,7 +563,7 @@ span {
   .vuseSecond .firstContainer button,
   .vuseSecond .secondContainer button,
   .vuseSecond .thirdContainer button {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .whyVuse,
@@ -525,16 +572,18 @@ span {
     font-size: 27px;
   }
 
-  .articles .categories .category1 h3 {
-    font-size: 25px;
-  }
-
-  .articles .categories .category1 p {
-    font-size: 22px;
-  }
-
-  .articles .categories .category1 button {
-    font-size: 22px;
+  .articles {
+    .categories {
+      .category1 {
+        h3 {
+          font-size: 25px;
+        }
+        p,
+        button {
+          font-size: 20px;
+        }
+      }
+    }
   }
 
   .articles .intro button {
@@ -551,16 +600,21 @@ span {
 
   .social .socialMedia {
     font-size: 27px;
+
+    .socialMedia2 {
+      img {
+        width: 40px;
+      }
+    }
   }
 
-  .about {
-    font-size: 24px;
+  .about .warnings p,
+  .about p,
+  .about h4 {
+    font-size: 21px;
   }
 
-  .news .newsletter {
-    font-size: 24px;
-  }
-
+  .news .newsletter,
   .news .newsletter button {
     font-size: 24px;
   }
@@ -577,17 +631,114 @@ span {
   .nav1,
   .nav2,
   .shipping,
-  .searchBar {
-    font-size: 24px;
-  }
-
+  .searchBar,
   .nav1 .navRight .account,
   .nav1 .navRight .shop {
     font-size: 24px;
   }
 }
 
+@media (min-width: 2550px) {
+  .navRight,
+  .nav2 {
+    font-size: 26px;
+  }
+
+  .navRight .account,
+  .navRight .shop {
+    svg {
+      width: 30px;
+    }
+  }
+
+  .nav1 img {
+    width: 170px;
+    height: 60px;
+  }
+
+  .navRight .searchDesktop {
+    svg {
+      width: 30px;
+    }
+  }
+
+  .shipping {
+    font-size: 30px;
+    padding-top: 4px;
+  }
+
+  .vuseMain .vuseDescription {
+    padding: 55px;
+  }
+
+  .vuseMain .vuseDescription p {
+    font-size: 27px;
+  }
+
+  .vuseSecond .firstContainer p,
+  .vuseSecond .secondContainer p,
+  .vuseSecond .thirdContainer p {
+    line-height: 2;
+    font-size: 25px;
+  }
+}
+
 @media (max-width: 640px) {
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .line {
+      width: 30px;
+      height: 3px;
+      background-color: @color-white;
+      margin: 6px 0;
+    }
+
+    .hamburgerText {
+      width: 30px;
+      height: 3px;
+      color: @color-white;
+      margin: 6px 0;
+    }
+  }
+
+  .nav1 {
+    padding: 10px;
+
+    .navRight {
+      .searchDesktop {
+        content-visibility: hidden;
+      }
+
+      .searchMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .account {
+        content-visibility: hidden;
+      }
+    }
+  }
+
+  .nav2 {
+    display: none;
+  }
+
+  .shipping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 10px;
+  }
+
   .vuseMain {
     display: flex;
     flex-direction: column;
@@ -613,11 +764,10 @@ span {
         border-radius: 25px;
         font-weight: bold;
         margin-top: 20px;
-      }
-
-      .secondBttn:hover {
-        background-color: @color-white;
-        cursor: pointer;
+        &:hover {
+          background-color: @color-white;
+          cursor: pointer;
+        }
       }
     }
   }
