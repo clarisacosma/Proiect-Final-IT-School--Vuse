@@ -13,6 +13,49 @@ body {
   min-height: 100vh;
   font-family: "Mont", sans-serif;
 }
+.shadeStyle {
+  background-color: #000;
+  opacity: 0.8;
+  position: absolute;
+  min-height: 100%;
+  width: 100vw;
+  z-index: 8;
+}
+.tooltipStyle {
+  position: sticky;
+  top: 123px;
+  background-color: #1d1d1b;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 15%;
+  padding: 15px 0;
+  font-size: 14px;
+  z-index: 9;
+}
+.tooltipStyle h2 {
+  padding-bottom: 15px;
+}
+.tooltipStyle .contactOptions {
+  display: flex;
+  column-gap: 55px;
+  align-items: center;
+  margin-top: 15px;
+}
+.tooltipStyle button {
+  color: #f8ab28;
+  background-color: transparent;
+  padding: 5px 15px;
+  border: 2px solid #f8ab28;
+  border-radius: 15px;
+  font-size: 12px;
+}
+.tooltipStyle .faq button {
+  margin-top: 15px;
+  padding: 5px 35px;
+  text-transform: uppercase;
+}
 .hamburger {
   display: none;
 }
@@ -385,6 +428,9 @@ span {
   justify-content: space-between;
   padding-top: 20px;
 }
+.footer .content .footerIntro {
+  display: none;
+}
 .footer .content .footer1,
 .footer .content .footer2,
 .footer .content .footer3 {
@@ -619,6 +665,29 @@ span {
   .nav2 {
     display: none;
   }
+  .nav2 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .nav2 ul li {
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: 1px solid #adadad;
+  }
+  .active {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    top: 65px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .shipping {
     display: flex;
     justify-content: center;
@@ -637,11 +706,14 @@ span {
   .vuseMain .vuseDescription {
     max-width: 100%;
     flex-grow: unset;
+    text-align: left;
+    padding-top: 15px;
   }
   .vuseMain .vuseDescription .firstBttn {
     display: none;
   }
   .vuseMain .vuseDescription .secondBttn {
+    display: block;
     content-visibility: visible;
     margin-bottom: 20px;
     background-color: #f8ab28;
@@ -658,6 +730,8 @@ span {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 8px;
   }
   .vuseSecond .firstContainer,
   .vuseSecond .secondContainer,
@@ -685,15 +759,26 @@ span {
   .vuseSecond .secondContainer button,
   .vuseSecond .thirdContainer button {
     margin-top: 2px;
+    margin-bottom: 10px;
   }
   .whyVuse {
     display: flex;
     flex-direction: column;
+    padding-top: 25px;
+    padding-left: 25px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .whyVuse h2 {
+    align-self: center;
   }
   .whyVuse .delivery,
   .whyVuse .tested {
     display: flex;
     flex-direction: row;
+  }
+  .whyVuse .tested {
+    padding-top: 0;
   }
   .articles {
     margin-top: 0px;
@@ -750,5 +835,56 @@ span {
     align-items: center;
     width: 90%;
     margin: auto;
+  }
+  .about p {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .news .newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .news .newsletter button {
+    margin-top: 10px;
+  }
+  .footer {
+    display: flex;
+  }
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .content .footerIntro {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  .footer .content .footerIntro svg {
+    display: flex;
+    stroke: #efefef;
+    fill: #1d1d1b;
+    width: 35px;
+  }
+  .footer .content .footerIntro svg:hover {
+    stroke: #f8ab28;
+    scale: calc(105%);
+    cursor: pointer;
+  }
+  .footer .content .footer1,
+  .footer .content .footer2,
+  .footer .content .footer3 {
+    width: 90%;
+  }
+  .footer .content .footer1 h4:last-of-type,
+  .footer .content svg {
+    display: none;
   }
 }

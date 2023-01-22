@@ -17,6 +17,55 @@ body {
   font-family: "Mont", sans-serif;
 }
 
+.shadeStyle {
+  background-color: #000;
+  opacity: 0.8;
+  position: absolute;
+  min-height: 100%;
+  width: 100vw;
+  z-index: 8;
+}
+
+.tooltipStyle {
+  position: sticky;
+  top: 123px;
+  background-color: @color-black;
+  color: @color-white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 15%;
+  padding: 15px 0;
+  font-size: 14px;
+  z-index: 9;
+
+  h2 {
+    padding-bottom: 15px;
+  }
+
+  .contactOptions {
+    display: flex;
+    column-gap: 55px;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  button {
+    color: @color-orange;
+    background-color: transparent;
+    padding: 5px 15px;
+    border: 2px solid @color-orange;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+
+  .faq button {
+    margin-top: 15px;
+    padding: 5px 35px;
+    text-transform: uppercase;
+  }
+}
+
 .hamburger {
   display: none;
 }
@@ -432,6 +481,10 @@ span {
     justify-content: space-between;
     padding-top: 20px;
 
+    .footerIntro {
+      display: none;
+    }
+
     .footer1,
     .footer2,
     .footer3 {
@@ -729,6 +782,37 @@ span {
 
   .nav2 {
     display: none;
+
+    // Am stilizat ul-ul din interiorul nav2-ului sa fie column centrat
+    //Din cauza ca nav2 are clasa 'active', e vizibil si se vede si ul-ul
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+
+      //Am facut li-urile sa ocupe 100% din parinte, sa aiba un border bottom si sa fie mai 'aerisite' cu padding
+      li {
+        width: 100%;
+        padding: 15px 0px;
+        border-bottom: 1px solid #adadad;
+      }
+    }
+  }
+
+  //Am definit clasa active sub nav2, pentru ca daca o defineam inainte ii dadea overwrite, fiind scrisa mai jos
+  //I-am dat position absolute ca sa se deschida peste celalalt content si am centrat-o
+  .active {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    top: 65px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .shipping {
@@ -751,12 +835,15 @@ span {
     .vuseDescription {
       max-width: 100%;
       flex-grow: unset;
+      text-align: left;
+      padding-top: 15px;
 
       .firstBttn {
         display: none;
       }
 
       .secondBttn {
+        display: block;
         content-visibility: visible;
         margin-bottom: 20px;
         background-color: @color-orange;
@@ -776,6 +863,8 @@ span {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 8px;
 
     .firstContainer,
     .secondContainer,
@@ -795,6 +884,7 @@ span {
 
       button {
         margin-top: 2px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -802,11 +892,23 @@ span {
   .whyVuse {
     display: flex;
     flex-direction: column;
+    padding-top: 25px;
+    padding-left: 25px;
+    align-items: flex-start;
+    text-align: left;
+
+    h2 {
+      align-self: center;
+    }
 
     .delivery,
     .tested {
       display: flex;
       flex-direction: row;
+    }
+
+    .tested {
+      padding-top: 0;
     }
   }
 
@@ -876,5 +978,66 @@ span {
     align-items: center;
     width: 90%;
     margin: auto;
+
+    p {
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      .footerIntro {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+      }
+
+      .footerIntro svg {
+        display: flex;
+        stroke: @color-grey;
+        fill: @color-black;
+        width: 35px;
+        &:hover {
+          stroke: @color-orange;
+          scale: calc(105%);
+          cursor: pointer;
+        }
+      }
+
+      .footer1,
+      .footer2,
+      .footer3 {
+        width: 90%;
+      }
+
+      .footer1 h4:last-of-type,
+      svg {
+        display: none;
+      }
+    }
   }
 }
