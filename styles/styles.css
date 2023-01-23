@@ -69,6 +69,7 @@ body {
   background-color: #1d1d1b;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 10px 100px;
 }
@@ -85,13 +86,23 @@ body {
   padding-left: 15px;
   font-size: 15px;
 }
-.nav1 .navRight .searchBar {
+.nav1 .navRight .searchDesktop {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav1 .navRight .searchDesktop .searchBar {
   background-color: #1d1d1b;
   border-top-style: hidden;
   border-left-style: hidden;
   border-right-style: hidden;
   border-bottom-style: groove;
   border-color: #efefef;
+  padding-bottom: 10px;
+}
+.nav1 .navRight .searchDesktop svg {
+  position: absolute;
+  right: 0;
   padding-bottom: 10px;
 }
 .nav1 .navRight .searchMobile {
@@ -122,6 +133,9 @@ span {
 .nav2 ul li:hover {
   color: #f8ab28;
   cursor: pointer;
+}
+.nav2 .mobileDropdown {
+  display: none;
 }
 .shipping {
   background-color: #4cd8c8;
@@ -205,6 +219,7 @@ span {
 .vuseSecond .thirdContainer .text3 {
   position: absolute;
   height: 100%;
+  max-width: 50%;
   padding: 25px 15px 15px 25px;
   text-align: left;
 }
@@ -636,22 +651,33 @@ span {
     align-items: center;
   }
   .hamburger .line {
-    width: 30px;
-    height: 3px;
+    width: 25px;
+    height: 1px;
     background-color: #fff;
-    margin: 6px 0;
+    margin-bottom: 6px;
+  }
+  .hamburger .line:first-of-type {
+    margin-top: 2px;
+  }
+  .hamburger .line:last-of-type {
+    margin-bottom: 0;
   }
   .hamburger .hamburgerText {
-    width: 30px;
-    height: 3px;
     color: #fff;
-    margin: 6px 0;
+    margin: 8px 0 0 0;
   }
   .nav1 {
     padding: 10px;
+    font-size: 11px;
+  }
+  .nav1 .navRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
   }
   .nav1 .navRight .searchDesktop {
-    content-visibility: hidden;
+    display: none;
   }
   .nav1 .navRight .searchMobile {
     display: flex;
@@ -660,7 +686,11 @@ span {
     align-items: center;
   }
   .nav1 .navRight .account {
-    content-visibility: hidden;
+    display: none;
+  }
+  .nav1 .navRight .shop {
+    font-size: 11px;
+    padding-left: 0;
   }
   .nav2 {
     display: none;
@@ -677,12 +707,60 @@ span {
     padding: 15px 0px;
     border-bottom: 1px solid #adadad;
   }
+  .nav2 ul li:last-of-type {
+    border-bottom: none;
+  }
+  .nav2 .supportBtn {
+    padding-bottom: 0;
+  }
+  .nav2 .supportBtn .mobileDropdown {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    margin-top: 10px;
+  }
+  .nav2 .supportBtn .mobileDropdown .contact,
+  .nav2 .supportBtn .mobileDropdown .faq {
+    width: 100%;
+    background-color: #316e6f;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .nav2 .supportBtn .mobileDropdown .contact h2,
+  .nav2 .supportBtn .mobileDropdown .faq h2 {
+    padding-bottom: 15px;
+    font-size: 20px;
+  }
+  .nav2 .supportBtn .mobileDropdown .contact .contactOptions,
+  .nav2 .supportBtn .mobileDropdown .faq .contactOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .nav2 .supportBtn .mobileDropdown .contact button,
+  .nav2 .supportBtn .mobileDropdown .faq button {
+    color: #f8ab28;
+    background-color: transparent;
+    padding: 5px 15px;
+    border: 2px solid #f8ab28;
+    border-radius: 25px;
+    font-size: 12px;
+  }
+  .nav2 .supportBtn .mobileDropdown .faq P {
+    margin-bottom: 15px;
+  }
+  .nav2 .supportBtn .mobileDropdown .faq button {
+    padding: 5px 35px;
+    text-transform: uppercase;
+  }
   .active {
     display: block;
     position: absolute;
     width: 100%;
     padding: 5px;
-    top: 65px;
+    top: 58px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -692,8 +770,13 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     font-size: 10px;
+    padding: 10px 0;
+  }
+  .shipping p {
+    max-width: 40%;
+    text-align: center;
+    font-weight: bold;
   }
   .vuseMain {
     display: flex;
@@ -707,7 +790,7 @@ span {
     max-width: 100%;
     flex-grow: unset;
     text-align: left;
-    padding-top: 15px;
+    padding: 15px 15px 0 15px;
   }
   .vuseMain .vuseDescription .firstBttn {
     display: none;
@@ -748,24 +831,30 @@ span {
   .vuseSecond .secondContainer .text3,
   .vuseSecond .thirdContainer .text3 {
     padding: 25px 15px;
+    max-width: 60%;
+  }
+  .vuseSecond .firstContainer h2,
+  .vuseSecond .secondContainer h2,
+  .vuseSecond .thirdContainer h2 {
+    max-width: 70%;
   }
   .vuseSecond .firstContainer p,
   .vuseSecond .secondContainer p,
   .vuseSecond .thirdContainer p {
     padding-top: 10px;
-    font-size: 20px;
+    font-size: 12px;
   }
   .vuseSecond .firstContainer button,
   .vuseSecond .secondContainer button,
   .vuseSecond .thirdContainer button {
     margin-top: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
   .whyVuse {
     display: flex;
     flex-direction: column;
     padding-top: 25px;
-    padding-left: 25px;
+    padding-left: 15px;
     align-items: flex-start;
     text-align: left;
   }
@@ -776,9 +865,17 @@ span {
   .whyVuse .tested {
     display: flex;
     flex-direction: row;
+    font-weight: 600;
+    padding-left: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
   }
   .whyVuse .tested {
     padding-top: 0;
+    padding-right: 0;
+  }
+  .whyVuse .tested p {
+    margin-left: 15px;
   }
   .articles {
     margin-top: 0px;
@@ -827,6 +924,9 @@ span {
     flex-wrap: wrap;
     width: 90%;
     margin: auto;
+  }
+  .social .socialPicsMobile img {
+    max-width: 50%;
   }
   .about {
     display: flex;
