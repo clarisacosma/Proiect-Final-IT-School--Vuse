@@ -841,14 +841,12 @@ span {
   .vuseSecond .firstContainer p,
   .vuseSecond .secondContainer p,
   .vuseSecond .thirdContainer p {
-    padding-top: 10px;
     font-size: 12px;
   }
   .vuseSecond .firstContainer button,
   .vuseSecond .secondContainer button,
   .vuseSecond .thirdContainer button {
     margin-top: 2px;
-    margin-bottom: 7px;
   }
   .whyVuse {
     display: flex;
@@ -879,6 +877,9 @@ span {
   }
   .articles {
     margin-top: 0px;
+  }
+  .articles h2 {
+    text-align: center;
   }
   .articles .intro {
     display: flex;
@@ -966,6 +967,10 @@ span {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+  }
+  .footer .content .logoMobile {
+    display: flex;
+    justify-content: space-around;
   }
   .footer .content .footerIntro svg {
     display: flex;
