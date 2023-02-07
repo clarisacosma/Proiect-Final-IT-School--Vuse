@@ -56,6 +56,42 @@ body {
   padding: 5px 35px;
   text-transform: uppercase;
 }
+.logIn {
+  position: absolute;
+  top: 53px;
+  background-color: #1d1d1b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  row-gap: 10px;
+}
+.logIn .loginNameContainer,
+.logIn .loginPassContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
+  color: #f8ab28;
+}
+.logIn .loginNameContainer #loginName,
+.logIn .loginPassContainer #loginName,
+.logIn .loginNameContainer #loginPassword,
+.logIn .loginPassContainer #loginPassword {
+  padding: 10px;
+}
+.logIn button {
+  color: #f8ab28;
+  background-color: transparent;
+  padding: 10px 0;
+  border: 2px solid #f8ab28;
+  border-radius: 17.5px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.toggleHidden {
+  display: block;
+}
 .hamburger {
   display: none;
 }
@@ -77,6 +113,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  position: relative;
+}
+.nav1 .navRight .account {
+  position: relative;
 }
 .nav1 .navRight .account,
 .nav1 .navRight .shop {
