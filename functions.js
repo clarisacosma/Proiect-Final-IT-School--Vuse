@@ -23,7 +23,8 @@ account.addEventListener("click", () => {
       <button>Submit</button>
 `;
     accountInfo.classList.add("logIn");
-    accountInfo.setAttribute("action", "GET");
+    accountInfo.setAttribute("action", "#");
+    accountInfo.setAttribute("method", "GET");
     navRight.insertBefore(accountInfo, shop);
   } else {
     accountInfo.remove();
